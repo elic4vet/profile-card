@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
+  font-family: "Kumbh Sans", sans-serif;
   --dark-cyan: hsl(185, 75%, 39%);
   --desaturated-blue: hsl(229, 23%, 23%);
   --grayish-blue: hsl(227, 10%, 46%);
@@ -14,10 +14,14 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: center;
-  font-family: "Roboto", sans-serif;
   background-color: var(--dark-cyan);
   font-size: 16px;
   line-height: 1.5;
+  background-image: url("./assets/images/bg-pattern-top.svg"),
+    url("./assets/images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 1200px 1200px, 1200px 1200px;
+  background-position: -130% 150%, 160% -110%;
 }
 
 p {
@@ -28,8 +32,38 @@ p {
   align-items: center;
   gap: 10px;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--dark-gray);
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  flex: 1;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--desaturated-blue);
+  text-align: center;
+}
+.age {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-gray);
+  text-align: center;
+}
 .container {
-  max-width: 600px;
+  width: 400px;
+  height: 400px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -43,6 +77,7 @@ p {
 .card {
   background-color: #fff;
   border-radius: 10px;
+  color: var(--desaturated-blue);
 }
 
 .header-img {
@@ -53,12 +88,11 @@ p {
 }
 
 .profile-img {
-  position: relative;
-  top: -10px;
-  left: 125px;
-  width: 90px;
+  width: 100px;
   border-radius: 50%;
+  position: relative;
   margin-top: -50px;
+  left: 148px;
   border: 5px solid #fff;
   display: flex;
   flex-direction: column;
@@ -74,6 +108,8 @@ p {
 
 .stats {
   font-weight: 700;
+  font-size: 18px;
+  color: var(--desaturated-blue);
 }
 
 .content {
@@ -81,20 +117,5 @@ p {
   font-size: 11px;
   text-align: center;
   color: var(--dark-gray);
-  letter-spacing: 0.5px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  border-top: 1px solid var(--dark-gray);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-li {
-  align-items: center;
-  padding: 15px 20px;
+  letter-spacing: 1px;
 }
